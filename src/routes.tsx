@@ -5,6 +5,7 @@ import Prayer from './pages/Prayer';
 import PrayerSuras from './pages/PrayerSuras';
 import PrayerDuas from './pages/PrayerDuas';
 import Ablutions from './pages/Ablutions';
+import AblutionDetail from './pages/AblutionDetail';
 import FuneralPrayer from './pages/FuneralPrayer';
 import HutbePrayers from './pages/HutbePrayers';
 import EidPrayer from './pages/EidPrayer';
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
       {
         path: 'ablutions',
         element: <Ablutions />,
+      },
+      {
+        path: 'ablutions/:id',
+        element: <AblutionDetail />,
       },
       {
         path: 'prayer-suras',
