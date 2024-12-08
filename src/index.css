@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Arabic';
+    src: url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&display=swap');
+  }
+}
+
+@font-face {
+  font-family: 'Amiri';
+  src: url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
+}
+
+.font-arabic {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+}
