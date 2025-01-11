@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namaz Sureleri - Namaz Hocası 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind.config.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 min-h-screen">
+    <header class="bg-white dark:bg-gray-800 shadow-sm">
+        <nav class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-xl font-semibold text-gray-800 dark:text-white">Namaz Hocası</a>
+                
+                <!-- Dark mode toggle -->
+                <div class="flex items-center space-x-4">
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" id="darkModeToggle" class="sr-only peer">
+                        <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                        <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Karanlık Mod</span>
+                    </label>
+                    
+                    <!-- Mobile menu button -->
+                    <button id="menuButton" class="md:hidden text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600" aria-label="toggle menu">
+                        <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current">
+                            <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile menu -->
+            <div id="mobileMenu" class="hidden md:flex mt-4 md:mt-0">
+                <div class="flex flex-col md:flex-row md:items-center md:space-x-4 space-y-2 md:space-y-0">
+                    <a href="prayers.html" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">Namazlar</a>
+                    <a href="prayer-suras.html" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">Namaz Sureleri</a>
+                    <a href="prayer-duas.html" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">Namaz Duaları</a>
+                    <a href="ablutions.html" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">Abdest</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <div class="relative rounded-xl overflow-hidden mb-8 h-64 md:h-96">
+            <img src="img/namazsureleri_hero.jpg" alt="Namaz Sureleri" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <h1 class="text-3xl md:text-4xl font-bold mb-2">Namaz Sureleri</h1>
+                <p class="text-lg md:text-xl">Namazda okunan temel sureler ve anlamları</p>
+            </div>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Main Content -->
+            <div class="lg:col-span-2 space-y-6">
+                <!-- Fatiha Suresi -->
+                <section class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Fatiha Suresi</h2>
+                    <div class="space-y-4">
+                        <div class="text-right text-2xl font-arabic text-gray-800 dark:text-gray-200 mb-4 leading-loose">
+                            بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ
+                            اَلْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَۙ
+                            اَلرَّحْمٰنِ الرَّح۪يمِۙ
+                            مَالِكِ يَوْمِ الدّ۪ينِۜ
+                            اِيَّاكَ نَعْبُدُ وَاِيَّاكَ نَسْتَع۪ينُۜ
+                            اِهْدِنَا الصِّرَاطَ الْمُسْتَق۪يمَۙ
+                            صِرَاطَ الَّذ۪ينَ اَنْعَمْتَ عَلَيْهِمْۙ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّٓالّ۪ينَ
+                        </div>
+                        <div class="space-y-4 text-gray-600 dark:text-gray-300">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Okunuşu</h3>
+                            <p class="italic">
+                                Bismillahirrahmanirrahim
+                                Elhamdü lillahi rabbil alemin
+                                Errahmanir rahim
+                                Maliki yevmiddin
+                                İyyake na'büdü ve iyyake nestain
+                                İhdinas sıratal müstakim
+                                Sıratallezine en'amte aleyhim ğayril mağdubi aleyhim veladdaaalliin
+                            </p>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Anlamı</h3>
+                            <p>
+                                Rahman ve Rahim olan Allah'ın adıyla.
+                                Hamd alemlerin Rabbi olan Allah'a mahsustur.
+                                O Rahman'dır, Rahim'dir.
+                                Din (hesap) gününün sahibidir.
+                                (Rabbimiz!) Ancak sana kulluk eder ve yalnız senden yardım dileriz.
+                                Bizi doğru yola ilet.
+                                Kendilerine nimet verdiklerinin yoluna; gazaba uğrayanların ve sapıkların yoluna değil.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- İhlas Suresi -->
+                <section class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">İhlas Suresi</h2>
+                    <div class="space-y-4">
+                        <div class="text-right text-2xl font-arabic text-gray-800 dark:text-gray-200 mb-4 leading-loose">
+                            بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ
+                            قُلْ هُوَ اللّٰهُ اَحَدٌۚ
+                            اَللّٰهُ الصَّمَدُۚ
+                            لَمْ يَلِدْ وَلَمْ يُولَدْۙ
+                            وَلَمْ يَكُنْ لَهُ كُفُواً اَحَدٌ
+                        </div>
+                        <div class="space-y-4 text-gray-600 dark:text-gray-300">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Okunuşu</h3>
+                            <p class="italic">
+                                Bismillahirrahmanirrahim
+                                Kul hüvallahü ehad
+                                Allahüssamed
+                                Lem yelid ve lem yüled
+                                Ve lem yekün lehü küfüven ehad
+                            </p>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Anlamı</h3>
+                            <p>
+                                Rahman ve Rahim olan Allah'ın adıyla.
+                                De ki: O Allah birdir.
+                                Allah Samed'dir (Her şey O'na muhtaçtır, O hiçbir şeye muhtaç değildir).
+                                O doğurmamış ve doğmamıştır.
+                                O'nun hiçbir dengi yoktur.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Felak Suresi -->
+                <section class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Felak Suresi</h2>
+                    <div class="space-y-4">
+                        <div class="text-right text-2xl font-arabic text-gray-800 dark:text-gray-200 mb-4 leading-loose">
+                            بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ
+                            قُلْ اَعُوذُ بِرَبِّ الْفَلَقِۙ
+                            مِنْ شَرِّ مَا خَلَقَۙ
+                            وَمِنْ شَرِّ غَاسِقٍ اِذَا وَقَبَۙ
+                            وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِۙ
+                            وَمِنْ شَرِّ حَاسِدٍ اِذَا حَسَدَ
+                        </div>
+                        <div class="space-y-4 text-gray-600 dark:text-gray-300">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Okunuşu</h3>
+                            <p class="italic">
+                                Bismillahirrahmanirrahim
+                                Kul euzü bi rabbil felak
+                                Min şerri ma halak
+                                Ve min şerri ğasikin iza vekab
+                                Ve min şerrin neffasati fil ukad
+                                Ve min şerri hasidin iza hased
+                            </p>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Anlamı</h3>
+                            <p>
+                                Rahman ve Rahim olan Allah'ın adıyla.
+                                De ki: Yarattığı şeylerin şerrinden,
+                                Karanlığı çöktüğü zaman gecenin şerrinden,
+                                Düğümlere üfürüp büyü yapan üfürükçülerin şerrinden,
+                                Ve kıskandığı vakit kıskanç kişinin şerrinden,
+                                Sabah aydınlığının Rabbine sığınırım.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <!-- Fil Suresi -->
+                <section class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Fil Suresi</h2>
+                    <div class="space-y-4">
+                        <div class="text-right text-2xl font-arabic text-gray-800 dark:text-gray-200 mb-4 leading-loose">
+                            بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ
+                            اَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِاَصْحَابِ الْف۪يلِۜ
+                            اَلَمْ يَجْعَلْ كَيْدَهُمْ ف۪ي تَضْل۪يلٍۙ
+                            وَاَرْسَلَ عَلَيْهِمْ طَيْراً اَبَاب۪يلَۙ
+                            تَرْم۪يهِمْ بِحِجَارَةٍ مِنْ سِجّ۪يلٍۙ
+                            فَجَعَلَهُمْ كَعَصْفٍ مَأْكُولٍ
+                        </div>
+                        <div class="space-y-4 text-gray-600 dark:text-gray-300">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Okunuşu</h3>
+                            <p class="italic">
+                                Bismillahirrahmanirrahim
+                                Elem tera keyfe feale rabbüke bi ashabil fil
+                                Elem yec'al keydehüm fi tadlil
+                                Ve ersele aleyhim tayran ebabil
+                                Termihim bi hicaretin min siccil
+                                Fe cealehüm keasfin me'kul
+                            </p>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Anlamı</h3>
+                            <p>
+                                Rahman ve Rahim olan Allah'ın adıyla.
+                                Rabbin fil sahiplerine neler etti, görmedin mi?
+                                Onların tuzaklarını boşa çıkarmadı mı?
+                                Üzerlerine sürü sürü kuşlar gönderdi.
+                                Onlara çamurdan taşlar atıyorlardı.
+                                Nihayet onları yenilmiş ekin yaprağı haline getirdi.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <!-- Kureyş Suresi -->
+                <section class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Kureyş Suresi</h2>
+                    <div class="space-y-4">
+                        <div class="text-right text-2xl font-arabic text-gray-800 dark:text-gray-200 mb-4 leading-loose">
+                            بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ
+                            لِا۪يلَافِ قُرَيْشٍۙ
+                            ا۪يلَافِهِمْ رِحْلَةَ الشِّتَٓاءِ وَالصَّيْفِۚ
+                            فَلْيَعْبُدُوا رَبَّ هٰذَا الْبَيْتِۙ
+                            اَلَّذ۪ٓي اَطْعَمَهُمْ مِنْ جُوعٍ وَاٰمَنَهُمْ مِنْ خَوْفٍ
+                        </div>
+                        <div class="space-y-4 text-gray-600 dark:text-gray-300">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Okunuşu</h3>
+                            <p class="italic">
+                                Bismillahirrahmanirrahim
+                                Li ilafi kureyşin
+                                İlafihim rihletesşitai vessayf
+                                Felya'büdü rabbe hazelbeyt
+                                Ellezi et'amehüm min cüin ve amenehüm min havf
+                            </p>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Anlamı</h3>
+                            <p>
+                                Rahman ve Rahim olan Allah'ın adıyla.
+                                Kureyş'in güvenliği için
+                                Onların kış ve yaz yolculuğunda güvenliğini sağlamak için
+                                Bu evin (Kabe'nin) Rabbine kulluk etsinler.
+                                O Rab ki, onları açlıktan (kurtarıp) doyurdu ve onları korkudan güvene kavuşturdu.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <!-- Maun Suresi -->
+                <section class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Maun Suresi</h2>
+                    <div class="space-y-4">
+                        <div class="text-right text-2xl font-arabic text-gray-800 dark:text-gray-200 mb-4 leading-loose">
+                            بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ
+                            اَرَاَيْتَ الَّذ۪ي يُكَذِّبُ بِالدّ۪ينِۙ
+                            فَذٰلِكَ الَّذ۪ي يَدُعُّ الْيَت۪يمَۙ
+                            وَلَا يَحُضُّ عَلٰى طَعَامِ الْمِسْك۪ينِۙ
+                            فَوَيْلٌ لِلْمُصَلّ۪ينَۙ
+                            الَّذ۪ينَ هُمْ عَنْ صَلَاتِهِمْ سَاهُونَۙ
+                            الَّذ۪ينَ هُمْ يُرَٓاءُونَۙ
+                            وَيَمْنَعُونَ الْمَاعُونَ
+                        </div>
+                        <div class="space-y-4 text-gray-600 dark:text-gray-300">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Okunuşu</h3>
+                            <p class="italic">
+                                Bismillahirrahmanirrahim
+                                Eraeytellezi yükezzibü biddin
+                                Fezalikellezi yedu'ul yetim
+                                Vela yehüddü ala taamil miskin
+                                Feveylün lil müsallin
+                                Ellezine hüm an salatihim sahun
+                                Ellezine hüm yüraun
+                                Ve yemneunel maun
+                            </p>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Anlamı</h3>
+                            <p>
+                                Rahman ve Rahim olan Allah'ın adıyla.
+                                Hesap ve ceza gününü yalanlayanı gördün mü?
+                                İşte o, yetimi itip kakan,
+                                Yoksulu yedirmeyi özendirmeyen kimsedir.
+                                Yazıklar olsun o namaz kılanlara ki,
+                                Onlar namazlarını ciddiye almazlar.
+                                Onlar (namazlarıyla) gösteriş yaparlar.
+                                Ufacık bir yardıma bile engel olurlar.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <!-- Kevser Suresi -->
+                <section class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Kevser Suresi</h2>
+                    <div class="space-y-4">
+                        <div class="text-right text-2xl font-arabic text-gray-800 dark:text-gray-200 mb-4 leading-loose">
+                            بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ
+                            اِنَّا اَعْطَيْنَاكَ الْكَوْثَرَۚ
+                            فَصَلِّ لِرَبِّكَ وَانْحَرْۚ
+                            اِنَّ شَانِئَكَ هُوَ الْاَبْتَرُ
+                        </div>
+                        <div class="space-y-4 text-gray-600 dark:text-gray-300">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Okunuşu</h3>
+                            <p class="italic">
+                                Bismillahirrahmanirrahim
+                                İnna a'taynakel kevser
+                                Fesalli li rabbike venhar
+                                İnne şanieke hüvel ebter
+                            </p>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Anlamı</h3>
+                            <p>
+                                Rahman ve Rahim olan Allah'ın adıyla.
+                                Şüphesiz biz sana Kevser'i verdik.
+                                O halde Rabbin için namaz kıl ve kurban kes.
+                                Doğrusu sana buğzeden, soyu kesik olanın ta kendisidir.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <!-- Kafirun Suresi -->
+                <section class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Kafirun Suresi</h2>
+                    <div class="space-y-4">
+                        <div class="text-right text-2xl font-arabic text-gray-800 dark:text-gray-200 mb-4 leading-loose">
+                            بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ
+                            قُلْ يَٓا اَيُّهَا الْكَافِرُونَۙ
+                            لَٓا اَعْبُدُ مَا تَعْبُدُونَۙ
+                            وَلَٓا اَنْتُمْ عَابِدُونَ مَٓا اَعْبُدُۚ
+                            وَلَٓا اَنَا۬ عَابِدٌ مَا عَبَدْتُمْۙ
+                            وَلَٓا اَنْتُمْ عَابِدُونَ مَٓا اَعْبُدُۚ
+                            لَكُمْ د۪ينُكُمْ وَلِيَ د۪ينِ
+                        </div>
+                        <div class="space-y-4 text-gray-600 dark:text-gray-300">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Okunuşu</h3>
+                            <p class="italic">
+                                Bismillahirrahmanirrahim
+                                Gul ya eyyühel kafirun
+                                La a'büdü ma ta'büdun
+                                Vela entüm abidune ma a'büd
+                                Vela ene abidün ma abedtüm
+                                Vela entüm abidune ma a'büd
+                                Leküm dinüküm veliye din
+                            </p>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Anlamı</h3>
+                            <p>
+                                Rahman ve Rahim olan Allah'ın adıyla.
+                                De ki: Ey kafirler!
+                                Ben sizin taptıklarınıza tapmam.
+                                Siz de benim ibadet ettiğime ibadet edecek değilsiniz.
+                                Ben de sizin taptıklarınıza tapacak değilim.
+                                Siz de benim ibadet ettiğime ibadet edecek değilsiniz.
+                                Sizin dininiz size, benim dinim bana!
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <!-- Nasr Suresi -->
+                <section class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Nasr Suresi</h2>
+                    <div class="space-y-4">
+                        <div class="text-right text-2xl font-arabic text-gray-800 dark:text-gray-200 mb-4 leading-loose">
+                            بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ
+                            اِذَا جَٓاءَ نَصْرُ اللّٰهِ وَالْفَتْحُۙ
+                            وَرَاَيْتَ النَّاسَ يَدْخُلُونَ ف۪ي د۪ينِ اللّٰهِ اَفْوَاجاًۙ
+                            فَسَبِّحْ بِحَمْدِ رَبِّكَ وَاسْتَغْفِرْهُۜ اِنَّهُ كَانَ تَوَّاباً
+                        </div>
+                        <div class="space-y-4 text-gray-600 dark:text-gray-300">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Okunuşu</h3>
+                            <p class="italic">
+                                Bismillahirrahmanirrahim
+                                İza cae nasrullahi vel feth
+                                Ve raeytennase yedhulune fi dinillahi efvaca
+                                Fe sebbih bi hamdi rabbike vestağfirh innehu kane tevvaba
+                            </p>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Anlamı</h3>
+                            <p>
+                                Rahman ve Rahim olan Allah'ın adıyla.
+                                Allah'ın yardımı ve fetih geldiği zaman,
+                                Ve insanların Allah'ın dinine dalga dalga girdiklerini gördüğün zaman,
+                                Rabbini hamd ile tesbih et ve O'ndan bağışlanma dile. Çünkü O, tövbeleri çok kabul edendir.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <!-- Tebbet Suresi -->
+                <section class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Tebbet Suresi</h2>
+                    <div class="space-y-4">
+                        <div class="text-right text-2xl font-arabic text-gray-800 dark:text-gray-200 mb-4 leading-loose">
+                            بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ
+                            تَبَّتْ يَدَٓا اَب۪ي لَهَبٍ وَتَبَّۜ
+                            مَٓا اَغْنٰى عَنْهُ مَالُهُ وَمَا كَسَبَۜ
+                            سَيَصْلٰى نَاراً ذَاتَ لَهَبٍۚ
+                            وَامْرَاَتُهُۜ حَمَّالَةَ الْحَطَبِۚ
+                            ف۪ي ج۪يدِهَا حَبْلٌ مِنْ مَسَدٍ
+                        </div>
+                        <div class="space-y-4 text-gray-600 dark:text-gray-300">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Okunuşu</h3>
+                            <p class="italic">
+                                Bismillahirrahmanirrahim
+                                Tebbet yeda ebi lehebin ve tebb
+                                Ma ağna anhü malühu ve ma keseb
+                                Seyasla naren zate leheb
+                                Vemraetüh hammalete'l-hatab
+                                Fi cidiha hablün min mesed
+                            </p>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Anlamı</h3>
+                            <p>
+                                Rahman ve Rahim olan Allah'ın adıyla.
+                                Ebû Leheb'in elleri kurusun! Zaten kurudu.
+                                Malı ve kazandıkları ona fayda vermedi.
+                                O, alevli bir ateşe girecektir.
+                                Karısı da, odun taşıyıcı olarak,
+                                Boynunda hurma lifinden bir ip olduğu halde (ateşe girecektir).
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="space-y-6">
+                <!-- Sure Listesi -->
+                <section class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Namaz Sureleri</h2>
+                    <div class="space-y-2">
+                        <a href="#fatiha" class="block p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors">
+                            <span class="font-medium text-gray-900 dark:text-white">Fatiha Suresi</span>
+                        </a>
+                        <a href="#fil" class="block p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors">
+                            <span class="font-medium text-gray-900 dark:text-white">Fil Suresi</span>
+                        </a>
+                        <a href="#ihlas" class="block p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors">
+                            <span class="font-medium text-gray-900 dark:text-white">İhlas Suresi</span>
+                        </a>
+                        <a href="#felak" class="block p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors">
+                            <span class="font-medium text-gray-900 dark:text-white">Felak Suresi</span>
+                        </a>
+                        <a href="#nas" class="block p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors">
+                            <span class="font-medium text-gray-900 dark:text-white">Nas Suresi</span>
+                        </a>
+                        <a href="#kureys" class="block p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors">
+                            <span class="font-medium text-gray-900 dark:text-white">Kureyş Suresi</span>
+                        </a>
+                        <a href="#maun" class="block p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors">
+                            <span class="font-medium text-gray-900 dark:text-white">Maun Suresi</span>
+                        </a>
+                        <a href="#kevser" class="block p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors">
+                            <span class="font-medium text-gray-900 dark:text-white">Kevser Suresi</span>
+                        </a>
+                        <a href="#kafirun" class="block p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors">
+                            <span class="font-medium text-gray-900 dark:text-white">Kafirun Suresi</span>
+                        </a>
+                        <a href="#nasr" class="block p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors">
+                            <span class="font-medium text-gray-900 dark:text-white">Nasr Suresi</span>
+                        </a>
+                        <a href="#tebbet" class="block p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors">
+                            <span class="font-medium text-gray-900 dark:text-white">Tebbet Suresi</span>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Önemli Bilgiler -->
+                <section class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Önemli Bilgiler</h2>
+                    <ul class="space-y-3 text-gray-600 dark:text-gray-300">
+                        <li class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Her namazda Fatiha suresi okunması farzdır</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Fatiha'dan sonra zamm-ı sure okunur</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Sureleri doğru telaffuzla okumak önemlidir</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Sure Uzunlukları -->
+                <section class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Sure Uzunlukları</h2>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <span class="text-gray-900 dark:text-white">Fatiha Suresi</span>
+                            <span class="font-medium text-emerald-600 dark:text-emerald-400">7 Ayet</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <span class="text-gray-900 dark:text-white">Fil Suresi</span>
+                            <span class="font-medium text-emerald-600 dark:text-emerald-400">5 Ayet</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <span class="text-gray-900 dark:text-white">İhlas Suresi</span>
+                            <span class="font-medium text-emerald-600 dark:text-emerald-400">4 Ayet</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <span class="text-gray-900 dark:text-white">Felak Suresi</span>
+                            <span class="font-medium text-emerald-600 dark:text-emerald-400">5 Ayet</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <span class="text-gray-900 dark:text-white">Nas Suresi</span>
+                            <span class="font-medium text-emerald-600 dark:text-emerald-400">6 Ayet</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <span class="text-gray-900 dark:text-white">Kureyş Suresi</span>
+                            <span class="font-medium text-emerald-600 dark:text-emerald-400">4 Ayet</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <span class="text-gray-900 dark:text-white">Maun Suresi</span>
+                            <span class="font-medium text-emerald-600 dark:text-emerald-400">7 Ayet</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <span class="text-gray-900 dark:text-white">Kevser Suresi</span>
+                            <span class="font-medium text-emerald-600 dark:text-emerald-400">3 Ayet</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <span class="text-gray-900 dark:text-white">Kafirun Suresi</span>
+                            <span class="font-medium text-emerald-600 dark:text-emerald-400">6 Ayet</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <span class="text-gray-900 dark:text-white">Nasr Suresi</span>
+                            <span class="font-medium text-emerald-600 dark:text-emerald-400">3 Ayet</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <span class="text-gray-900 dark:text-white">Tebbet Suresi</span>
+                            <span class="font-medium text-emerald-600 dark:text-emerald-400">5 Ayet</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-800 mt-12 py-6">
+        <div class="container mx-auto px-4">
+            <p class="text-center text-gray-600 dark:text-gray-400"> 2025 Namaz Hocası. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'arapcalar';
+    src: url('../font/ScheherazadeNew-Medium.woff') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-arabic {
+    font-family: 'arapcalar', serif;
+    direction: rtl;
+}
+
+/* Custom Styles */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+}

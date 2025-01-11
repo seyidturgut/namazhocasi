@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namazlar - Namaz Öğreniyorum</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="min-h-screen bg-gray-50">
+    <header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
+        <div class="mx-auto px-2 sm:px-4 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                    </svg>
+                    <h1 class="text-xl font-bold text-gray-900">Namaz Öğreniyorum</h1>
+                </a>
+                
+                <button id="menuButton" class="p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 6h16M4 12h16m-16 6h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden absolute top-full left-0 right-0 bg-white shadow-lg">
+            <nav class="max-w-7xl mx-auto divide-y divide-gray-100">
+                <a href="index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Ana Sayfa</a>
+                <a href="prayers.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Namazlar</a>
+                <a href="ablutions.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Abdest</a>
+                <a href="prayer-duas.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Namaz Duaları</a>
+                <a href="prayer-suras.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Namaz Sureleri</a>
+                <a href="hutbe-prayers.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Hutbe Duaları</a>
+                <a href="eid-prayer.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Bayram Namazı</a>
+                <a href="funeral-prayer.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Cenaze Namazı</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Header Section -->
+        <div class="bg-gradient-to-r from-emerald-600 to-emerald-500 text-white py-12 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto">
+                <div class="flex items-center gap-3 mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 20h-7M20 20v-7M20 20L13 13M4 4h7M4 4v7M4 4l7 7"></path>
+                    </svg>
+                    <h1 class="text-3xl font-bold">Namazlar</h1>
+                </div>
+                <p class="text-emerald-50 text-lg">
+                    İslam'ın beş şartından biri olan namazı doğru bir şekilde öğrenmek ve uygulamak için hazırlanmış kapsamlı rehber.
+                </p>
+            </div>
+        </div>
+
+        <!-- Content Section -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Sabah Namazı -->
+                <div class="group relative bg-white rounded-2xl shadow-sm hover:shadow-md transition-all duration-200 border border-gray-100 hover:border-emerald-100 overflow-hidden">
+                    <div class="absolute top-4 right-4">
+                        <div class="bg-emerald-50 text-emerald-600 w-10 h-10 rounded-full flex items-center justify-center font-medium">
+                            1
+                        </div>
+                    </div>
+
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-900 mb-3 pr-12">
+                            Sabah Namazı
+                        </h2>
+                        <p class="text-gray-600 mb-6">
+                            Sabah namazı toplam 4 rekattır: 2 rekat sünnet, 2 rekat farz. İmsak ile güneş doğuşu arası kılınır.
+                        </p>
+                        <div class="flex items-center text-emerald-600 font-medium">
+                            <span>Detaylı Bilgi</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 opacity-0 group-hover:opacity-100 transition-all" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 to-emerald-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></div>
+                </div>
+
+                <!-- Öğle Namazı -->
+                <div class="group relative bg-white rounded-2xl shadow-sm hover:shadow-md transition-all duration-200 border border-gray-100 hover:border-emerald-100 overflow-hidden">
+                    <div class="absolute top-4 right-4">
+                        <div class="bg-emerald-50 text-emerald-600 w-10 h-10 rounded-full flex items-center justify-center font-medium">
+                            2
+                        </div>
+                    </div>
+
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-900 mb-3 pr-12">
+                            Öğle Namazı
+                        </h2>
+                        <p class="text-gray-600 mb-6">
+                            Öğle namazı toplam 10 rekattır: 4 rekat ilk sünnet, 4 rekat farz, 2 rekat son sünnet. Güneş tam tepedeyken başlar, ikindi vaktine kadar kılınır.
+                        </p>
+                        <div class="flex items-center text-emerald-600 font-medium">
+                            <span>Detaylı Bilgi</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 opacity-0 group-hover:opacity-100 transition-all" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 to-emerald-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></div>
+                </div>
+
+                <!-- İkindi Namazı -->
+                <div class="group relative bg-white rounded-2xl shadow-sm hover:shadow-md transition-all duration-200 border border-gray-100 hover:border-emerald-100 overflow-hidden">
+                    <div class="absolute top-4 right-4">
+                        <div class="bg-emerald-50 text-emerald-600 w-10 h-10 rounded-full flex items-center justify-center font-medium">
+                            3
+                        </div>
+                    </div>
+
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-900 mb-3 pr-12">
+                            İkindi Namazı
+                        </h2>
+                        <p class="text-gray-600 mb-6">
+                            İkindi namazı toplam 8 rekattır: 4 rekat sünnet, 4 rekat farz. Her şeyin gölgesi kendisinin iki katına ulaştığı zamandan güneş batımına kadar kılınır.
+                        </p>
+                        <div class="flex items-center text-emerald-600 font-medium">
+                            <span>Detaylı Bilgi</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 opacity-0 group-hover:opacity-100 transition-all" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 to-emerald-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></div>
+                </div>
+
+                <!-- Akşam Namazı -->
+                <div class="group relative bg-white rounded-2xl shadow-sm hover:shadow-md transition-all duration-200 border border-gray-100 hover:border-emerald-100 overflow-hidden">
+                    <div class="absolute top-4 right-4">
+                        <div class="bg-emerald-50 text-emerald-600 w-10 h-10 rounded-full flex items-center justify-center font-medium">
+                            4
+                        </div>
+                    </div>
+
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-900 mb-3 pr-12">
+                            Akşam Namazı
+                        </h2>
+                        <p class="text-gray-600 mb-6">
+                            Akşam namazı toplam 5 rekattır: 3 rekat farz, 2 rekat sünnet. Güneş battıktan sonra başlar, şafak sönene kadar kılınır.
+                        </p>
+                        <div class="flex items-center text-emerald-600 font-medium">
+                            <span>Detaylı Bilgi</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 opacity-0 group-hover:opacity-100 transition-all" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 to-emerald-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></div>
+                </div>
+
+                <!-- Yatsı Namazı -->
+                <div class="group relative bg-white rounded-2xl shadow-sm hover:shadow-md transition-all duration-200 border border-gray-100 hover:border-emerald-100 overflow-hidden">
+                    <div class="absolute top-4 right-4">
+                        <div class="bg-emerald-50 text-emerald-600 w-10 h-10 rounded-full flex items-center justify-center font-medium">
+                            5
+                        </div>
+                    </div>
+
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-900 mb-3 pr-12">
+                            Yatsı Namazı
+                        </h2>
+                        <p class="text-gray-600 mb-6">
+                            Yatsı namazı toplam 13 rekattır: 4 rekat ilk sünnet, 4 rekat farz, 2 rekat son sünnet, 3 rekat vitir. Şafak söndükten sonra başlar, imsak vaktine kadar kılınır.
+                        </p>
+                        <div class="flex items-center text-emerald-600 font-medium">
+                            <span>Detaylı Bilgi</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 opacity-0 group-hover:opacity-100 transition-all" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 to-emerald-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Mobile menu functionality
+        const menuButton = document.getElementById('menuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!menuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

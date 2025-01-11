@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdest - Namaz Hocası 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind.config.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 min-h-screen">
+    <header class="bg-white dark:bg-gray-800 shadow-sm">
+        <nav class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <button id="menuButton" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors md:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600 dark:text-gray-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 6h16M4 12h16m-16 6h16"></path>
+                        </svg>
+                    </button>
+                    <a href="index.html" class="text-xl font-semibold text-gray-800 dark:text-white ml-2">Namaz Hocası</a>
+                </div>
+                
+                <!-- Dark mode toggle -->
+                <div class="flex items-center space-x-4">
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" id="darkModeToggle" class="sr-only peer">
+                        <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                        <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Karanlık Mod</span>
+                    </label>
+                    
+                    <!-- Mobile menu button -->
+                    <button id="menuButton" class="md:hidden text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600" aria-label="toggle menu">
+                        <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current">
+                            <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4">
+                <nav class="flex flex-col space-y-2">
+                    <a href="index.html" class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Ana Sayfa</a>
+                    <a href="prayers.html" class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Namazlar</a>
+                    <a href="ablutions.html" class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Abdest</a>
+                    <a href="prayer-duas.html" class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Namaz Duaları</a>
+                    <a href="prayer-suras.html" class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Namaz Sureleri</a>
+                    <a href="hutbe-prayers.html" class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Hutbe Duaları</a>
+                    <a href="eid-prayer.html" class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Bayram Namazı</a>
+                    <a href="funeral-prayer.html" class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Cenaze Namazı</a>
+                </nav>
+            </div>
+
+            <!-- Desktop menu -->
+            <div class="hidden md:flex mt-4 md:mt-0">
+                <div class="flex flex-col md:flex-row md:items-center">
+                    <a href="index.html" class="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2">Ana Sayfa</a>
+                    <a href="prayer-suras.html" class="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2">Namaz Sureleri</a>
+                    <a href="prayer-duas.html" class="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2">Namaz Duaları</a>
+                    <a href="ablutions.html" class="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2">Abdest</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-8 mt-8">
+        <!-- Hero Section -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Abdest</h1>
+            <p class="text-xl text-gray-600 dark:text-gray-400">
+                Namaz abdesti, gusül abdesti ve teyemmümün nasıl alınacağını detaylı bir şekilde öğrenin.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Main Content -->
+            <div class="lg:col-span-2 space-y-6">
+                <!-- Namaz Abdesti -->
+                <section class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Namaz Abdesti</h2>
+                    <div class="space-y-4">
+                        <p class="text-gray-700 dark:text-gray-300">
+                            Namaz abdesti, namazın farzlarından biridir ve şu şekilde alınır:
+                        </p>
+                        <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
+                            <li>Niyet edilir</li>
+                            <li>Eller bileklere kadar üç kere yıkanır</li>
+                            <li>Ağza üç kere su alınıp çalkalanır</li>
+                            <li>Buruna üç kere su çekilir ve temizlenir</li>
+                            <li>Yüz üç kere yıkanır</li>
+                            <li>Sağ kol dirseklerle beraber üç kere yıkanır</li>
+                            <li>Sol kol dirseklerle beraber üç kere yıkanır</li>
+                            <li>Başın dörtte biri mesh edilir</li>
+                            <li>Kulaklar mesh edilir</li>
+                            <li>Enseye mesh edilir</li>
+                            <li>Sağ ayak üç kere yıkanır</li>
+                            <li>Sol ayak üç kere yıkanır</li>
+                        </ol>
+                    </div>
+                </section>
+
+                <!-- Gusül Abdesti -->
+                <section class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Gusül Abdesti</h2>
+                    <div class="space-y-4">
+                        <p class="text-gray-700 dark:text-gray-300">
+                            Gusül abdesti, büyük abdestsizlik durumundan temizlenmek için alınır:
+                        </p>
+                        <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
+                            <li>Niyet edilir</li>
+                            <li>Besmele çekilir</li>
+                            <li>Eller ve avret yeri yıkanır</li>
+                            <li>Namaz abdesti gibi abdest alınır</li>
+                            <li>Başa üç kere su dökülür</li>
+                            <li>Sağ omuza üç kere su dökülür</li>
+                            <li>Sol omuza üç kere su dökülür</li>
+                            <li>Tüm vücut kuru yer kalmayacak şekilde yıkanır</li>
+                        </ol>
+                    </div>
+                </section>
+
+                <!-- Teyemmüm -->
+                <section class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Teyemmüm</h2>
+                    <div class="space-y-4">
+                        <p class="text-gray-700 dark:text-gray-300">
+                            Su bulunmadığı veya kullanılamadığı durumlarda teyemmüm yapılır:
+                        </p>
+                        <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
+                            <li>Niyet edilir</li>
+                            <li>Besmele çekilir</li>
+                            <li>Eller temiz toprağa veya toprağın cinsinden bir şeye vurulur</li>
+                            <li>Yüz mesh edilir</li>
+                            <li>Eller tekrar toprağa vurulur</li>
+                            <li>Sağ kol dirseklere kadar mesh edilir</li>
+                            <li>Sol kol dirseklere kadar mesh edilir</li>
+                        </ol>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="space-y-6">
+                <!-- Hızlı Erişim -->
+                <section class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Hızlı Erişim</h2>
+                    <div class="space-y-2">
+                        <a href="#namaz-abdesti" class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300">Namaz Abdesti</a>
+                        <a href="#gusul-abdesti" class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300">Gusül Abdesti</a>
+                        <a href="#teyemmum" class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300">Teyemmüm</a>
+                    </div>
+                </section>
+
+                <!-- Önemli Bilgiler -->
+                <section class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Önemli Bilgiler</h2>
+                    <ul class="space-y-3 text-gray-600 dark:text-gray-300">
+                        <li class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>Abdest alırken sırayı takip edin</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>Her uzvu üç kere yıkayın</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>Suyu israf etmemeye dikkat edin</span>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Dark mode toggle functionality
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        
+        // Check for saved dark mode preference or system preference
+        if (localStorage.getItem('darkMode') === 'true' || 
+            (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            darkModeToggle.checked = true;
+        }
+
+        // Toggle dark mode
+        darkModeToggle.addEventListener('change', () => {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('darkMode', darkModeToggle.checked);
+        });
+
+        // Mobile menu toggle
+        const menuButton = document.getElementById('menuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!menuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

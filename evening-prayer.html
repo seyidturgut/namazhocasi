@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akşam Namazı - Namaz Hocası 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind.config.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 min-h-screen">
+    <header class="bg-white dark:bg-gray-800 shadow-sm">
+        <nav class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-xl font-semibold text-gray-800 dark:text-white">Namaz Hocası</a>
+                
+                <!-- Dark mode toggle -->
+                <div class="flex items-center space-x-4">
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" id="darkModeToggle" class="sr-only peer">
+                        <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                        <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Karanlık Mod</span>
+                    </label>
+                    
+                    <!-- Mobile menu button -->
+                    <button id="menuButton" class="md:hidden text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600" aria-label="toggle menu">
+                        <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current">
+                            <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile menu -->
+            <div id="mobileMenu" class="hidden md:flex mt-4 md:mt-0">
+                <div class="flex flex-col md:flex-row md:items-center md:space-x-4 space-y-2 md:space-y-0">
+                    <a href="prayers.html" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">Namazlar</a>
+                    <a href="prayer-suras.html" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">Namaz Sureleri</a>
+                    <a href="prayer-duas.html" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">Namaz Duaları</a>
+                    <a href="ablutions.html" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">Abdest</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <div class="relative rounded-xl overflow-hidden mb-8 h-64 md:h-96">
+            <img src="img/aksamnamazi_hero.jpg" alt="Akşam Namazı" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <h1 class="text-3xl md:text-4xl font-bold mb-2">Akşam Namazı</h1>
+                <p class="text-lg md:text-xl">Günün huzur dolu vakti</p>
+            </div>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Main Content -->
+            <div class="lg:col-span-2 space-y-6">
+                <!-- Namaz Bilgileri -->
+                <section class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Namaz Vakti</h2>
+                    <div class="space-y-4 text-gray-600 dark:text-gray-300">
+                        <p>Akşam namazı vakti, güneşin batmasıyla başlar ve şafağın kaybolmasına kadar devam eder.</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                            <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Başlangıç</h3>
+                                <p>Güneşin batışı</p>
+                            </div>
+                            <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Bitiş</h3>
+                                <p>Şafağın kaybolması (yatsı vakti)</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Namaz Kılınışı -->
+                <section class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Namaz Kılınışı</h2>
+                    <div class="space-y-6">
+                        <!-- Farz -->
+                        <div class="border-b border-gray-200 dark:border-gray-700 pb-6">
+                            <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Akşam Namazının 3 Rekat Farzının Kılınışı</h3>
+                            
+                            <!-- 1. Rekat -->
+                            <div class="mb-6">
+                                <h4 class="text-lg font-medium text-gray-900 dark:text-white mb-3">1. Rekat</h4>
+                                <ol class="list-decimal list-inside space-y-3 text-gray-600 dark:text-gray-300">
+                                    <li class="pl-4">"Niyet ettim Allah rızası için Akşam namazının üç rekat farzını kılmaya" diye niyet ederiz</li>
+                                    <li class="pl-4">"Allahu Ekber" diyerek İftitah Tekbiri alır ve namaza başlarız</li>
+                                    <li class="pl-4">Subhaneke'yi okuruz</li>
+                                    <li class="pl-4">Euzü-besmele çekeriz</li>
+                                    <li class="pl-4">Fatiha okuruz</li>
+                                    <li class="pl-4">Kur'an'dan en az, kısa üç ayet veya üç ayet miktarı uzun bir âyet okuruz</li>
+                                    <li class="pl-4">Rüku'ya gideriz</li>
+                                    <li class="pl-4">Secde'ye gideriz. Doğruluruz, tekrar Secde'ye gideriz</li>
+                                </ol>
+                            </div>
+
+                            <!-- 2. Rekat -->
+                            <div class="mb-6">
+                                <h4 class="text-lg font-medium text-gray-900 dark:text-white mb-3">2. Rekat</h4>
+                                <ol class="list-decimal list-inside space-y-3 text-gray-600 dark:text-gray-300">
+                                    <li class="pl-4">Ayağa kalkarak kıyama dururuz</li>
+                                    <li class="pl-4">Besmele çekeriz</li>
+                                    <li class="pl-4">Fatiha okuruz</li>
+                                    <li class="pl-4">Kur'an'dan en az, kısa üç ayet veya üç ayet miktarı uzun bir âyet okuruz</li>
+                                    <li class="pl-4">Rüku'ya gideriz</li>
+                                    <li class="pl-4">Secde'ye gideriz. Doğruluruz, tekrar Secde'ye gideriz</li>
+                                    <li class="pl-4">Oturarak Ettahiyyatu okuruz</li>
+                                </ol>
+                            </div>
+
+                            <!-- 3. Rekat -->
+                            <div>
+                                <h4 class="text-lg font-medium text-gray-900 dark:text-white mb-3">3. Rekat</h4>
+                                <ol class="list-decimal list-inside space-y-3 text-gray-600 dark:text-gray-300">
+                                    <li class="pl-4">Ayağa kalkarak kıyama dururuz</li>
+                                    <li class="pl-4">Besmele çekeriz</li>
+                                    <li class="pl-4">Fatiha okuruz</li>
+                                    <li class="pl-4">Rüku'ya gideriz</li>
+                                    <li class="pl-4">Secde'ye gideriz. Doğruluruz, tekrar Secde'ye gideriz</li>
+                                    <li class="pl-4">Oturarak Ettahiyyatu ve Allâhumme salli, Allâhumme Bârik ve Rabbenâ dualarını okuruz</li>
+                                    <li class="pl-4">"Es selâmu aleyküm ve rahmet'ullah" diye sağa ve sola selam vererek namazı tamamlarız</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <!-- Sünnet -->
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Akşam Namazının 2 Rekat Sünnetinin Kılınışı</h3>
+                            
+                            <!-- 1. Rekat -->
+                            <div class="mb-6">
+                                <h4 class="text-lg font-medium text-gray-900 dark:text-white mb-3">1. Rekat</h4>
+                                <ol class="list-decimal list-inside space-y-3 text-gray-600 dark:text-gray-300">
+                                    <li class="pl-4">"Niyet ettim Allah rızası için Akşam namazının iki rekat sünnetini kılmaya" diye niyet ederiz</li>
+                                    <li class="pl-4">"Allahu Ekber" diyerek İftitah Tekbiri alır ve namaza başlarız</li>
+                                    <li class="pl-4">Subhaneke'yi okuruz</li>
+                                    <li class="pl-4">Euzü-besmele çekeriz</li>
+                                    <li class="pl-4">Fatiha okuruz</li>
+                                    <li class="pl-4">Kur'an'dan en az, kısa üç ayet veya üç ayet miktarı uzun bir âyet okuruz</li>
+                                    <li class="pl-4">Rüku'ya gideriz</li>
+                                    <li class="pl-4">Secde'ye gideriz. Doğruluruz, tekrar Secde'ye gideriz</li>
+                                </ol>
+                            </div>
+
+                            <!-- 2. Rekat -->
+                            <div>
+                                <h4 class="text-lg font-medium text-gray-900 dark:text-white mb-3">2. Rekat</h4>
+                                <ol class="list-decimal list-inside space-y-3 text-gray-600 dark:text-gray-300">
+                                    <li class="pl-4">Ayağa kalkarak kıyama dururuz</li>
+                                    <li class="pl-4">Besmele çekeriz</li>
+                                    <li class="pl-4">Fatiha okuruz</li>
+                                    <li class="pl-4">Kur'an'dan en az, kısa üç ayet veya üç ayet miktarı uzun bir âyet okuruz</li>
+                                    <li class="pl-4">Rüku'ya gideriz</li>
+                                    <li class="pl-4">Secde'ye gideriz. Doğruluruz, tekrar Secde'ye gideriz</li>
+                                    <li class="pl-4">Oturarak Ettahiyyatu ve Allâhumme salli, Allâhumme Bârik ve Rabbenâ dualarını okuruz</li>
+                                    <li class="pl-4">"Es selâmu aleyküm ve rahmet'ullah" diye sağa ve sola selam vererek namazı tamamlarız</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="space-y-6">
+                <!-- Önemli Bilgiler -->
+                <section class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Önemli Bilgiler</h2>
+                    <ul class="space-y-3 text-gray-600 dark:text-gray-300">
+                        <li class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Vakit girer girmez kılınması faziletlidir</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Cemaatle kılınması daha faziletlidir</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Farzdan sonra sünnet kılınır</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Namaz Rekatları -->
+                <section class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Namaz Rekatları</h2>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <span class="font-medium text-gray-900 dark:text-white">Farz</span>
+                            <span class="text-gray-600 dark:text-gray-300">3 Rekat</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <span class="font-medium text-gray-900 dark:text-white">Sünnet</span>
+                            <span class="text-gray-600 dark:text-gray-300">2 Rekat</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-800 mt-12 py-6">
+        <div class="container mx-auto px-4">
+            <p class="text-center text-gray-600 dark:text-gray-400"> 2025 Namaz Hocası. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

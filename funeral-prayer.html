@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cenaze Namazı - Namaz Hocası</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <header class="bg-white shadow-sm">
+        <nav class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <button id="menuButton" class="p-2 rounded-lg hover:bg-gray-100 transition-colors md:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 6h16M4 12h16m-16 6h16"></path>
+                        </svg>
+                    </button>
+                    <a href="index.html" class="text-xl font-semibold text-gray-800 ml-2">Namaz Hocası</a>
+                </div>
+                
+                <!-- Dark mode toggle -->
+                <div class="flex items-center space-x-4">
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" id="darkModeToggle" class="sr-only peer">
+                        <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                        <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Karanlık Mod</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Mobile menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4">
+                <nav class="flex flex-col space-y-2">
+                    <a href="index.html" class="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Ana Sayfa</a>
+                    <a href="prayers.html" class="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Namazlar</a>
+                    <a href="ablutions.html" class="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Abdest</a>
+                    <a href="prayer-duas.html" class="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Namaz Duaları</a>
+                    <a href="prayer-suras.html" class="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Namaz Sureleri</a>
+                    <a href="hutbe-prayers.html" class="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Hutbe Duaları</a>
+                    <a href="eid-prayer.html" class="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Bayram Namazı</a>
+                    <a href="funeral-prayer.html" class="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Cenaze Namazı</a>
+                </nav>
+            </div>
+
+            <!-- Desktop menu -->
+            <div class="hidden md:flex mt-4 md:mt-0">
+                <div class="flex flex-col md:flex-row md:items-center">
+                    <a href="index.html" class="text-gray-800 hover:text-blue-600 px-3 py-2">Ana Sayfa</a>
+                    <a href="prayer-suras.html" class="text-gray-800 hover:text-blue-600 px-3 py-2">Namaz Sureleri</a>
+                    <a href="prayer-duas.html" class="text-gray-800 hover:text-blue-600 px-3 py-2">Namaz Duaları</a>
+                    <a href="ablutions.html" class="text-gray-800 hover:text-blue-600 px-3 py-2">Abdest</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-8 mt-4">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Main Content -->
+            <div class="lg:col-span-2">
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h1 class="text-2xl font-bold text-gray-900 mb-6">Cenaze Namazı</h1>
+                    
+                    <!-- Cenaze Namazı Section -->
+                    <div class="space-y-6">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <h2 class="text-xl font-semibold text-gray-900 mb-4">Cenaze Namazı Hakkında</h2>
+                            <p class="text-gray-600">
+                                Cenaze namazı, farz-ı kifayedir. Yani Müslümanlardan bir kısmının kılması ile diğerlerinden sorumluluk kalkar. 
+                                Hiç kimse kılmazsa bütün Müslümanlar sorumlu olur.
+                            </p>
+                        </div>
+
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <h2 class="text-xl font-semibold text-gray-900 mb-4">Cenaze Namazının Şartları</h2>
+                            <ul class="list-disc list-inside text-gray-600 space-y-2">
+                                <li>Cenazenin Müslüman olması</li>
+                                <li>Cenazenin yıkanmış olması</li>
+                                <li>Cenazenin kıbleye karşı konulması</li>
+                                <li>Cenazenin namaz kılanların önünde bulunması</li>
+                                <li>Cenazenin temiz olması</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <h2 class="text-xl font-semibold text-gray-900 mb-4">Cenaze Namazının Kılınışı</h2>
+                            <div class="space-y-4">
+                                <div>
+                                    <h3 class="font-medium text-gray-900 mb-2">1. Niyet</h3>
+                                    <p class="text-gray-600">
+                                        "Niyet ettim Allah rızası için bu cenaze namazını kılmaya, uydum imama" diye niyet edilir.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <h3 class="font-medium text-gray-900 mb-2">2. Tekbirler ve Dualar</h3>
+                                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                                        <li><strong>1. Tekbir:</strong> "Allahu Ekber" denir ve eller bağlanır. Sübhaneke okunur.</li>
+                                        <li><strong>2. Tekbir:</strong> "Allahu Ekber" denir. Salli ve Barik duaları okunur.</li>
+                                        <li><strong>3. Tekbir:</strong> "Allahu Ekber" denir. Cenaze duası okunur.</li>
+                                        <li><strong>4. Tekbir:</strong> "Allahu Ekber" denir ve selam verilir.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <h2 class="text-xl font-semibold text-gray-900 mb-4">Cenaze Duası</h2>
+                            <div class="space-y-4">
+                                <div class="bg-gray-50 p-4 rounded">
+                                    <p class="text-gray-900 font-arabic text-right mb-2">
+                                        اَللَّهُمَّ اغْفِرْ لِحَيِّنَا وَمَيِّتِنَا وَشَاهِدِنَا وَغَائِبِنَا وَصَغِيرِنَا وَكَبِيرِنَا وَذَكَرِنَا وَأُنْثَانَا
+                                    </p>
+                                    <p class="text-gray-600 italic mb-2">
+                                        Allahümmeğfir lihayyina ve meyyitina ve şahidina ve gaibina ve sağirina ve kebirina ve zekerina ve ünsana
+                                    </p>
+                                    <p class="text-gray-600">
+                                        Allah'ım! Dirimizi, ölümüzü, hazır olanımızı, olmayanımızı, küçüğümüzü, büyüğümüzü, erkeklerimizi ve kadınlarımızı bağışla.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:col-span-1">
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h2 class="text-xl font-semibold text-gray-900 mb-4">Önemli Bilgiler</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-5 h-5 text-blue-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <p class="text-gray-600">Cenaze namazı farz-ı kifayedir.</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-5 h-5 text-blue-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <p class="text-gray-600">Rükû ve secdesi yoktur.</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-5 h-5 text-blue-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <p class="text-gray-600">Dört tekbirden oluşur.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Dark mode toggle functionality
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        
+        // Check for saved dark mode preference or system preference
+        if (localStorage.getItem('darkMode') === 'true' || 
+            (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            darkModeToggle.checked = true;
+        }
+
+        // Toggle dark mode
+        darkModeToggle.addEventListener('change', () => {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('darkMode', darkModeToggle.checked);
+        });
+
+        // Mobile menu toggle
+        const menuButton = document.getElementById('menuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!menuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

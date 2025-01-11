@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="tr" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namaz Duaları - Namaz Hocası 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind.config.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 min-h-screen">
+    <header class="bg-white dark:bg-gray-800 shadow-sm">
+        <nav class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <button id="menuButton" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors md:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600 dark:text-gray-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 6h16M4 12h16m-16 6h16"></path>
+                        </svg>
+                    </button>
+                    <a href="index.html" class="text-xl font-semibold text-gray-800 dark:text-white ml-2">Namaz Hocası</a>
+                </div>
+                
+                <!-- Dark mode toggle -->
+                <div class="flex items-center space-x-4">
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" id="darkModeToggle" class="sr-only peer">
+                        <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                        <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Karanlık Mod</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Mobile menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4">
+                <nav class="flex flex-col space-y-2">
+                    <a href="index.html" class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Ana Sayfa</a>
+                    <a href="prayers.html" class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Namazlar</a>
+                    <a href="ablutions.html" class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Abdest</a>
+                    <a href="prayer-duas.html" class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Namaz Duaları</a>
+                    <a href="prayer-suras.html" class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Namaz Sureleri</a>
+                    <a href="hutbe-prayers.html" class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Hutbe Duaları</a>
+                    <a href="eid-prayer.html" class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Bayram Namazı</a>
+                    <a href="funeral-prayer.html" class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Cenaze Namazı</a>
+                </nav>
+            </div>
+
+            <!-- Desktop menu -->
+            <div class="hidden md:flex mt-4 md:mt-0">
+                <div class="flex flex-col md:flex-row md:items-center">
+                    <a href="index.html" class="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2">Ana Sayfa</a>
+                    <a href="prayer-suras.html" class="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2">Namaz Sureleri</a>
+                    <a href="prayer-duas.html" class="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2">Namaz Duaları</a>
+                    <a href="ablutions.html" class="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2">Abdest</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12">
+        <!-- Hero Section -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Namaz Duaları</h1>
+            <p class="text-xl text-gray-600 dark:text-gray-400">
+                Namazda okunan duaları Arapça metni, okunuşu ve Türkçe anlamıyla öğrenin
+            </p>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Main Content -->
+            <div class="lg:col-span-2 space-y-6">
+                <!-- Sübhaneke -->
+                <section class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Sübhaneke Duası</h2>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">Namaza başlarken okunan ilk duadır.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="text-right text-2xl font-arabic text-gray-800 dark:text-gray-200 mb-4 leading-loose">
+                            سُبْحَانَكَ اللّٰهُمَّ وَبِحَمْدِكَ وَتَبَارَكَ اسْمُكَ وَتَعَالٰى جَدُّكَ وَلَا اِلٰهَ غَيْرُكَ
+                        </div>
+                        
+                        <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                            <h3 class="font-medium text-gray-900 dark:text-white mb-2">Okunuşu</h3>
+                            <p class="text-gray-700 dark:text-gray-300">Sübhaneke Allahümme ve bi hamdik. Ve tebarekesmük. Ve teala ceddük. Ve la ilahe ğayruk.</p>
+                        </div>
+                        
+                        <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                            <h3 class="font-medium text-gray-900 dark:text-white mb-2">Anlamı</h3>
+                            <p class="text-gray-700 dark:text-gray-300">Allah'ım! Sen eksik sıfatlardan pak ve uzaksın. Seni daima böyle tenzih eder ve överim. Senin adın mübarektir. Varlığın her şeyden üstündür. Senden başka ilah yoktur.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Ettehiyyatü -->
+                <section class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Ettehiyyatü Duası</h2>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">Namazın oturuşlarında okunan temel duadır.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="text-right text-2xl font-arabic text-gray-800 dark:text-gray-200 mb-4 leading-loose">
+                            اَلتَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ اَلسَّلاَمُ عَلَيْكَ اَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ اَلسَّلاَمُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ اَشْهَدُ اَنْ لاَ اِلَهَ اِلاَّ اللَّهُ وَاَشْهَدُ اَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ
+                        </div>
+                        
+                        <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                            <h3 class="font-medium text-gray-900 dark:text-white mb-2">Okunuşu</h3>
+                            <p class="text-gray-700 dark:text-gray-300">Ettehiyyatü lillahi vessalevatü vetteyyibat. Esselamü aleyke eyyühen nebiyyü ve rahmetullahi ve berekatüh. Esselamü aleyna ve ala ibadillahis salihin. Eşhedü en la ilahe illallah ve eşhedü enne Muhammeden abdühü ve resulüh.</p>
+                        </div>
+                        
+                        <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                            <h3 class="font-medium text-gray-900 dark:text-white mb-2">Anlamı</h3>
+                            <p class="text-gray-700 dark:text-gray-300">Dil ile, beden ve mal ile yapılan bütün ibadetler Allah'a mahsustur. Ey Peygamber! Allah'ın selamı, rahmet ve bereketleri senin üzerine olsun. Selam bizim üzerimize ve Allah'ın bütün iyi kulları üzerine olsun. Şahitlik ederim ki, Allah'tan başka ilah yoktur. Yine şahitlik ederim ki, Muhammed O'nun kulu ve elçisidir.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Allahümme Salli -->
+                <section class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Allahümme Salli</h2>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">Son oturuşta Ettehiyyatü'den sonra okunan duadır.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="text-right text-2xl font-arabic text-gray-800 dark:text-gray-200 mb-4 leading-loose">
+                            اَللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى اِبْرَاهِيمَ وَعَلَى آلِ اِبْرَاهِيمَ اِنَّكَ حَمِيدٌ مَجِيدٌ
+                        </div>
+                        
+                        <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                            <h3 class="font-medium text-gray-900 dark:text-white mb-2">Okunuşu</h3>
+                            <p class="text-gray-700 dark:text-gray-300">Allahümme salli ala Muhammedin ve ala ali Muhammed. Kema salleyte ala İbrahime ve ala ali İbrahim. İnneke hamidün mecid.</p>
+                        </div>
+                        
+                        <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                            <h3 class="font-medium text-gray-900 dark:text-white mb-2">Anlamı</h3>
+                            <p class="text-gray-700 dark:text-gray-300">Allah'ım! Muhammed'e ve Muhammed'in ümmetine rahmet eyle; şerefini yücelt. İbrahim'e ve İbrahim'in ümmetine rahmet ettiğin gibi. Şüphesiz övülmeye layık yalnız sensin, şan ve şeref sahibi de sensin.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Allahümme Barik -->
+                <section class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Allahümme Barik</h2>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">Son oturuşta Allahümme Salli'den sonra okunan duadır.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="text-right text-2xl font-arabic text-gray-800 dark:text-gray-200 mb-4 leading-loose">
+                            اَللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى اِبْرَاهِيمَ وَعَلَى آلِ اِبْرَاهِيمَ اِنَّكَ حَمِيدٌ مَجِيدٌ
+                        </div>
+                        
+                        <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                            <h3 class="font-medium text-gray-900 dark:text-white mb-2">Okunuşu</h3>
+                            <p class="text-gray-700 dark:text-gray-300">Allahümme barik ala Muhammedin ve ala ali Muhammed. Kema barekte ala İbrahime ve ala ali İbrahim. İnneke hamidün mecid.</p>
+                        </div>
+                        
+                        <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                            <h3 class="font-medium text-gray-900 dark:text-white mb-2">Anlamı</h3>
+                            <p class="text-gray-700 dark:text-gray-300">Allah'ım! Muhammed'e ve Muhammed'in ümmetine hayır ve bereket ver. İbrahim'e ve İbrahim'in ümmetine verdiğin gibi. Şüphesiz övülmeye layık yalnız sensin, şan ve şeref sahibi de sensin.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Rabbena Duaları -->
+                <section class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Rabbena Duaları</h2>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">Namazın sonunda selam vermeden önce okunabilecek dualardandır.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="text-right text-2xl font-arabic text-gray-800 dark:text-gray-200 mb-4 leading-loose">
+                            رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ
+                        </div>
+                        
+                        <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                            <h3 class="font-medium text-gray-900 dark:text-white mb-2">Okunuşu</h3>
+                            <p class="text-gray-700 dark:text-gray-300">Rabbena atina fid dünya haseneten ve fil ahireti haseneten ve kına azaben nar.</p>
+                        </div>
+                        
+                        <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                            <h3 class="font-medium text-gray-900 dark:text-white mb-2">Anlamı</h3>
+                            <p class="text-gray-700 dark:text-gray-300">Rabbimiz! Bize dünyada iyilik ver, ahirette de iyilik ver. Bizi cehennem azabından koru.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Rabbenağfirli -->
+                <section class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Rabbenağfirli Duası</h2>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">Namazın sonunda selam vermeden önce okunabilecek dualardandır.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="text-right text-2xl font-arabic text-gray-800 dark:text-gray-200 mb-4 leading-loose">
+                            رَبَّنَا اغْفِرْ لِي وَلِوَالِدَيَّ وَلِلْمُؤْمِنِينَ يَوْمَ يَقُومُ الْحِسَابُ
+                        </div>
+                        
+                        <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                            <h3 class="font-medium text-gray-900 dark:text-white mb-2">Okunuşu</h3>
+                            <p class="text-gray-700 dark:text-gray-300">Rabbenağfirli ve li valideyye ve lil müminine yevme yekumül hisab.</p>
+                        </div>
+                        
+                        <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                            <h3 class="font-medium text-gray-900 dark:text-white mb-2">Anlamı</h3>
+                            <p class="text-gray-700 dark:text-gray-300">Rabbimiz! Hesap gününde beni, ana-babamı ve bütün müminleri bağışla.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Ayetel Kürsi -->
+                <section class="bg-gray-800 dark:bg-gray-800 rounded-xl p-6 shadow-sm mb-6">
+                    <h2 class="text-2xl font-semibold mb-4 text-white">Ayetel Kürsi</h2>
+                    <p class="text-gray-300 mb-6">Namazın sonunda okunabilecek dualardandır.</p>
+                    
+                    <div class="space-y-4">
+                        <p class="mb-6 font-arabic text-right text-white">اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ مَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلَا يُحِيطُونَ بِشَيْءٍ مِنْ عِلْمِهِ إِلَّا بِمَا شَاءَ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ وَلَا يَئُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ</p>
+                        
+                        <div class="bg-gray-700 rounded-lg p-4">
+                            <h3 class="font-medium text-white mb-2">Okunuşu</h3>
+                            <p class="text-gray-300">Allâhü lâ ilâhe illâ hüvel hayyül kayyûm. Lâ te'huzühû sinetün velâ nevm. Lehû mâ fis semâvâti vemâ fil ard. Menzellezî yeşfeu indehû illâ bi iznih. Ya'lemü mâ beyne eydîhim vemâ halfehüm velâ yuhîtûne bi şey'in min ilmihî illâ bimâ şâe vesia kürsiyyühüs semâvâti vel ard. Velâ yeûdühû hifzuhümâ ve hüvel aliyyül azîm.</p>
+                        </div>
+                        
+                        <div class="bg-gray-700 rounded-lg p-4">
+                            <h3 class="font-medium text-white mb-2">Anlamı</h3>
+                            <p class="text-gray-300">Allah'tan başka hiçbir ilâh yoktur. O daima diridir, bütün varlığın idaresini yürütendir. O'nu ne uyuklama tutar ne de uyku. Göklerde ve yerde ne varsa hepsi O'nundur. İzni olmadan huzurunda şefaat edecek olan kimdir? O, kullarının önlerindekini ve arkalarındakini bilir. Onlar ise O'nun dilediği kadarından başka ilminden hiçbir şey kavrayamazlar. O'nun kürsüsü gökleri ve yeri kaplamıştır. Gökleri ve yeri koruyup gözetmek O'na güç gelmez. O yücedir, büyüktür.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Kunut Duaları -->
+                <section class="bg-gray-800 dark:bg-gray-800 rounded-xl p-6 shadow-sm mb-6">
+                    <h2 class="text-2xl font-semibold mb-4 text-white">Kunut Duaları</h2>
+                    <p class="text-gray-300 mb-6">Vitir namazının son rekatında okunur.</p>
+                    
+                    <div class="space-y-6">
+                        <!-- Birinci Kunut Duası -->
+                        <div class="space-y-4">
+                            <p class="mb-6 font-arabic text-right text-white">اَللَّهُمَّ إِنَّا نَسْتَعِينُكَ وَنَسْتَغْفِرُكَ وَنَسْتَهْدِيكَ وَنُؤْمِنُ بِكَ وَنَتُوبُ إِلَيْكَ وَنَتَوَكَّلُ عَلَيْكَ وَنُثْنِي عَلَيْكَ الْخَيْرَ كُلَّهُ نَشْكُرُكَ وَلاَ نَكْفُرُكَ وَنَخْلَعُ وَنَتْرُكُ مَنْ يَفْجُرُكَ</p>
+                            
+                            <div class="bg-gray-700 rounded-lg p-4">
+                                <h3 class="font-medium text-white mb-2">Okunuşu</h3>
+                                <p class="text-gray-300">Allahümme inna nesteınüke ve nestağfiruke ve nestehdik. Ve nü'minü bike ve netübü ileyk. Ve netevekkelü aleyke ve nüsni aleykel hayra külleh. Neşkürüke vela nekfürük. Ve nahleu ve netrükü men yefcürük.</p>
+                            </div>
+                            
+                            <div class="bg-gray-700 rounded-lg p-4">
+                                <h3 class="font-medium text-white mb-2">Anlamı</h3>
+                                <p class="text-gray-300">Allah'ım! Senden yardım isteriz, günahlarımızı bağışlamanı isteriz, razı olduğun şeylere hidayet etmeni isteriz. Sana inanırız, sana tevbe ederiz. Sana güveniriz. Bize verdiğin bütün nimetleri bilerek seni hayır ile överiz. Sana şükrederiz. Hiçbir nimetini inkar etmez ve onları başkasından bilmeyiz. Nimetlerini inkar eden ve sana karşı geleni bırakırız.</p>
+                            </div>
+                        </div>
+
+                        <!-- İkinci Kunut Duası -->
+                        <div class="space-y-4">
+                            <p class="mb-6 font-arabic text-right text-white">اَللَّهُمَّ إِيَّاكَ نَعْبُدُ وَلَكَ نُصَلِّي وَنَسْجُدُ وَإِلَيْكَ نَسْعَى وَنَحْفِدُ نَرْجُو رَحْمَتَكَ وَنَخْشَى عَذَابَكَ إِنَّ عَذَابَكَ بِالْكُفَّارِ مُلْحِقٌ</p>
+                            
+                            <div class="bg-gray-700 rounded-lg p-4">
+                                <h3 class="font-medium text-white mb-2">Okunuşu</h3>
+                                <p class="text-gray-300">Allahümme iyyake na'büdü ve leke nüsalli ve nescüd. Ve ileyke nes'a ve nahfid. Nercü rahmeteke ve nahşa azabek. İnne azabeke bil küffari mülhık.</p>
+                            </div>
+                            
+                            <div class="bg-gray-700 rounded-lg p-4">
+                                <h3 class="font-medium text-white mb-2">Anlamı</h3>
+                                <p class="text-gray-300">Allah'ım! Biz yalnız sana kulluk ederiz. Namazı yalnız senin için kılarız, ancak sana secde ederiz. Yalnız sana koşar ve sana yaklaştıracak şeyleri kazanmaya çalışırız. İbadetlerini sevinçle yaparız. Rahmetinin devamını ve çoğalmasını dileriz. Azabından korkarız. Şüphesiz senin azabın kafirlere ve inançsızlara ulaşır.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- HÜVALLAHÜLLEZI (HAŞR 22-23-24) -->
+                <section class="bg-gray-800 dark:bg-gray-800 rounded-xl p-6 shadow-sm mb-6">
+                    <h2 class="text-2xl font-semibold mb-4 text-white">HÜVALLAHÜLLEZI (HAŞR 22-23-24)</h2>
+                    <p class="text-gray-300 mb-6">Haşr suresinin son üç ayetidir.</p>
+                    
+                    <div class="space-y-4">
+                        <p class="mb-6 font-arabic text-right text-white">هُوَ اللَّهُ الَّذِي لَا إِلَهَ إِلَّا هُوَ عَالِمُ الْغَيْبِ وَالشَّهَادَةِ هُوَ الرَّحْمَنُ الرَّحِيمُ ﴿٢٢﴾ هُوَ اللَّهُ الَّذِي لَا إِلَهَ إِلَّا هُوَ الْمَلِكُ الْقُدُّوسُ السَّلَامُ الْمُؤْمِنُ الْمُهَيْمِنُ الْعَزِيزُ الْجَبَّارُ الْمُتَكَبِّرُ سُبْحَانَ اللَّهِ عَمَّا يُشْرِكُونَ ﴿٢٣﴾ هُوَ اللَّهُ الْخَالِقُ الْبَارِئُ الْمُصَوِّرُ لَهُ الْأَسْمَاءُ الْحُسْنَى يُسَبِّحُ لَهُ مَا فِي السَّمَاوَاتِ وَالْأَرْضِ وَهُوَ الْعَزِيزُ الْحَكِيمُ ﴿٢٤﴾</p>
+                        
+                        <div class="bg-gray-700 rounded-lg p-4">
+                            <h3 class="font-medium text-white mb-2">Okunuşu</h3>
+                            <p class="text-gray-300">Hüvallahüllezi la ilahe illa hü. Alimül gaybi veşşehadeh. Hüver rahmanür rahim. Hüvallahüllezi la ilahe illa hüvel melikül kuddüsüs selamül mü'minül müheyminül azizül cebbarül mütekebbir. Sübhanallahi amma yüşrikün. Hüvallahül halikul bariül musavvirü lehül esmaül hüsna. Yüsebbihu lehu ma fis semavati vel ard. Ve hüvel azizül hakim.</p>
+                        </div>
+                        
+                        <div class="bg-gray-700 rounded-lg p-4">
+                            <h3 class="font-medium text-white mb-2">Anlamı</h3>
+                            <p class="text-gray-300">O, kendisinden başka hiçbir ilâh olmayan Allah'tır. Gaybı da, görünen âlemi de bilendir. O, Rahmân'dır, Rahîm'dir. O, kendisinden başka hiçbir ilâh olmayan Allah'tır. O, mülkün gerçek sahibi, kutsal (her türlü eksiklikten uzak), barış ve esenliğin kaynağı, güvenlik veren, gözetip koruyan, mutlak güç sahibi, düzeltip ıslah eden ve dilediğini yaptıran ve büyüklükte eşsiz olan Allah'tır. Allah, onların ortak koştuklarından uzaktır. O, yaratan, yoktan var eden, şekil veren Allah'tır. Güzel isimler O'nundur. Göklerdeki ve yerdeki her şey O'nu tesbih eder. O, mutlak güç sahibidir, hüküm ve hikmet sahibidir.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="space-y-6">
+                <!-- Dua Listesi -->
+                <section class="bg-gray-800 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-3xl font-semibold mb-8 text-white">Namaz Duaları</h2>
+                    <div class="space-y-4">
+                        <a href="#subhaneke" class="block text-xl text-gray-300 hover:text-white transition-colors duration-200">Sübhaneke Duası</a>
+                        <a href="#ettehiyyatu" class="block text-xl text-gray-300 hover:text-white transition-colors duration-200">Ettehiyyatü Duası</a>
+                        <a href="#allahümme-salli" class="block text-xl text-gray-300 hover:text-white transition-colors duration-200">Allahümme Salli</a>
+                        <a href="#allahümme-barik" class="block text-xl text-gray-300 hover:text-white transition-colors duration-200">Allahümme Barik</a>
+                        <a href="#rabbena-duaları" class="block text-xl text-gray-300 hover:text-white transition-colors duration-200">Rabbena Duaları</a>
+                        <a href="#ayetel-kursi" class="block text-xl text-gray-300 hover:text-white transition-colors duration-200">Ayetel Kürsi</a>
+                        <a href="#kunut-duaları" class="block text-xl text-gray-300 hover:text-white transition-colors duration-200">Kunut Duaları</a>
+                        <a href="#hasr" class="block text-xl text-gray-300 hover:text-white transition-colors duration-200">Haşr (22-23-24)</a>
+                    </div>
+                </section>
+
+                <!-- Önemli Bilgiler -->
+                <section class="bg-gray-800 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-xl font-semibold mb-4 text-white">Önemli Bilgiler</h2>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>Duaları doğru telaffuz etmeye özen gösterin</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>Anlamlarını öğrenmeye çalışın</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>Düzenli tekrar yapın</span>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Dark mode toggle functionality
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        
+        // Check for saved dark mode preference or system preference
+        if (localStorage.getItem('darkMode') === 'true' || 
+            (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            darkModeToggle.checked = true;
+        }
+
+        // Toggle dark mode
+        darkModeToggle.addEventListener('change', () => {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('darkMode', darkModeToggle.checked);
+        });
+
+        // Mobile menu toggle
+        const menuButton = document.getElementById('menuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!menuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bayram Namazı - Namaz Hocası</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 min-h-screen">
+    <header class="bg-white dark:bg-gray-800 shadow-sm">
+        <nav class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <button id="menuButton" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors md:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600 dark:text-gray-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 6h16M4 12h16m-16 6h16"></path>
+                        </svg>
+                    </button>
+                    <a href="index.html" class="text-xl font-semibold text-gray-800 dark:text-white ml-2">Namaz Hocası</a>
+                </div>
+                
+                <!-- Dark mode toggle -->
+                <div class="flex items-center space-x-4">
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" id="darkModeToggle" class="sr-only peer">
+                        <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                        <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Karanlık Mod</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Mobile menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4">
+                <nav class="flex flex-col space-y-2">
+                    <a href="index.html" class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Ana Sayfa</a>
+                    <a href="prayers.html" class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Namazlar</a>
+                    <a href="ablutions.html" class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Abdest</a>
+                    <a href="prayer-duas.html" class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Namaz Duaları</a>
+                    <a href="prayer-suras.html" class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Namaz Sureleri</a>
+                    <a href="hutbe-prayers.html" class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Hutbe Duaları</a>
+                    <a href="eid-prayer.html" class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Bayram Namazı</a>
+                    <a href="funeral-prayer.html" class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">Cenaze Namazı</a>
+                </nav>
+            </div>
+
+            <!-- Desktop menu -->
+            <div class="hidden md:flex mt-4 md:mt-0">
+                <div class="flex flex-col md:flex-row md:items-center">
+                    <a href="index.html" class="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2">Ana Sayfa</a>
+                    <a href="prayer-suras.html" class="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2">Namaz Sureleri</a>
+                    <a href="prayer-duas.html" class="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2">Namaz Duaları</a>
+                    <a href="ablutions.html" class="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2">Abdest</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-8 mt-4">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Main Content -->
+            <div class="lg:col-span-2">
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6">
+                    <h1 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Bayram Namazı</h1>
+                    
+                    <!-- Bayram Namazı Section -->
+                    <div class="space-y-6">
+                        <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+                            <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Bayram Namazı Nedir?</h2>
+                            <p class="text-gray-600 dark:text-gray-300">
+                                Bayram namazı, Ramazan ve Kurban bayramlarında, güneş doğduktan yaklaşık 45-50 dakika sonra 
+                                kılınan, iki rekatlık bir namazdır. Bu namaz, bayramın önemli bir parçası olup, 
+                                Müslümanların bir araya gelerek bayram sevincini paylaşmalarına vesile olur.
+                            </p>
+                        </div>
+
+                        <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+                            <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Bayram Namazının Kılınışı</h2>
+                            <div class="space-y-4">
+                                <h3 class="text-lg font-medium text-gray-800 dark:text-gray-200">1. Rekat</h3>
+                                <ol class="list-decimal list-inside space-y-2 text-gray-600 dark:text-gray-300">
+                                    <li>Niyet edilir: "Niyet ettim Allah rızası için Bayram namazı kılmaya, uydum imama"</li>
+                                    <li>"Allahu Ekber" diyerek namaza başlanır ve eller bağlanır</li>
+                                    <li>Sübhaneke okunur</li>
+                                    <li>Üç kez tekbir alınır (Her tekbirde eller kulak hizasına kaldırılır ve yanlara salınır)</li>
+                                    <li>Dördüncü tekbirde eller bağlanır</li>
+                                    <li>İmam, Fatiha ve bir sure okur</li>
+                                    <li>Rüku ve secdelere gidilir</li>
+                                </ol>
+
+                                <h3 class="text-lg font-medium text-gray-800 dark:text-gray-200">2. Rekat</h3>
+                                <ol class="list-decimal list-inside space-y-2 text-gray-600 dark:text-gray-300">
+                                    <li>İmam, Fatiha ve bir sure okur</li>
+                                    <li>Üç kez tekbir alınır</li>
+                                    <li>Dördüncü tekbirle rükuya gidilir</li>
+                                    <li>Secdeler yapılır ve oturulur</li>
+                                    <li>Tahiyyat, Salli-Barik ve Rabbena duaları okunur</li>
+                                    <li>Selam verilerek namaz tamamlanır</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+                            <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Önemli Notlar</h2>
+                            <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
+                                <li>Bayram namazı sadece cemaatle kılınır, tek başına kılınmaz</li>
+                                <li>Ezan ve kamet okunmaz</li>
+                                <li>Bayram namazında fazladan tekbirler alınır</li>
+                                <li>Bayram namazı, güneş doğduktan 45-50 dakika sonra kılınır</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+                            <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Bayram Tekbiri</h2>
+                            <div class="space-y-4">
+                                <div class="text-right">
+                                    <p class="text-xl font-amiri text-gray-800 dark:text-gray-200 mb-2">
+                                        اَللّٰهُ اَكْبَرْ اَللّٰهُ اَكْبَرْ لَا اِلٰهَ اِلَّا اللّٰهُ وَاللّٰهُ اَكْبَرْ اَللّٰهُ اَكْبَرْ وَلِلّٰهِ الْحَمْدُ
+                                    </p>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-300">Okunuşu: Allâhu ekber Allâhu ekber lâ ilâhe illallâhu vallâhu ekber Allâhu ekber ve lillâhi'l-hamd</p>
+                                <p class="text-gray-600 dark:text-gray-300">Anlamı: Allah en büyüktür, Allah en büyüktür. Allah'tan başka ilah yoktur. Allah en büyüktür, Allah en büyüktür. Hamd Allah'a mahsustur.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:col-span-1">
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6">
+                    <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Önemli Bilgiler</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-5 h-5 text-blue-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <p class="text-gray-600 dark:text-gray-300">Bayram namazı, güneş doğduktan 45-50 dakika sonra kılınır.</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-5 h-5 text-blue-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <p class="text-gray-600 dark:text-gray-300">Bayram namazı sadece erkeklere vaciptir.</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-5 h-5 text-blue-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <p class="text-gray-600 dark:text-gray-300">Bayram namazından önce ve sonra nafile namaz kılınmaz.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Dark mode toggle functionality
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        
+        // Check for saved dark mode preference or system preference
+        if (localStorage.getItem('darkMode') === 'true' || 
+            (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            darkModeToggle.checked = true;
+        }
+
+        // Toggle dark mode
+        darkModeToggle.addEventListener('change', () => {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('darkMode', darkModeToggle.checked);
+        });
+
+        // Mobile menu toggle
+        const menuButton = document.getElementById('menuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!menuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
