@@ -18,7 +18,7 @@ Namaz Hocası, beş vakit namazın nasıl kılınacağını detaylı bir şekild
 
 ## Lisans
 
-Bu proje MAviay Yazılım'a aittir. Tüm hakları saklıdır.
+Bu proje Maviay Yazılım'a aittir. Tüm hakları saklıdır.
 
 ## Kullanıldığı Uygulama
 
